@@ -1,0 +1,37 @@
+### LOGIN CUSTOMER
+POST http://localhost:8089/api/v1/login
+Accept: application/json,
+Content-Type: application/json
+
+{
+  "username": "saya2",
+  "password": "sayahaja"
+}
+
+### REGISTER CUSTOMER
+POST http://localhost:8089/api/v1/customer
+Accept: application/json,
+Content-Type: application/json
+
+{
+  "username": "saya2",
+  "password": "sayahaja",
+  "name": "Saya Haj2",
+  "address": "Jalan-jalan",
+  "balance": 200000
+}
+
+### GET ALL CUSTOMER
+GET http://localhost:8089/api/v1/customer
+
+
+### CREATE NEW TRANSACTION
+POST http://localhost:8089/api/v1/transaction
+Accept: application/json,
+Content-Type: application/json
+
+{
+  "SenderId": "658066d6-798a-47e7-9f6f-5ffc149a35a5",
+  "RecieverId": "9f8d901d-9375-4a3b-bbd0-961c3bfbec9b",
+  "Amount": 200000
+}

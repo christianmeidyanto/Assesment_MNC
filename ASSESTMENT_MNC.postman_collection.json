@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "d3e038d7-aff8-43c0-93aa-a97f6257f54b",
+		"name": "ASSESTMENT_MNC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30179571"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"sayati12\",\r\n  \"password\": \"sayahaja\"\r\n}"
+						},
+						"url": "http://localhost:8089/api/v1/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"budi12\",\r\n  \"password\": \"rahasia\",\r\n  \"name\": \"Budi\",\r\n  \"address\": \"Jl Sanak no.xx\",\r\n  \"balance\": 200000\r\n}"
+						},
+						"url": "http://localhost:8089/api/v1/register"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get All Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJQYXltZW50QXBpIiwiZXhwIjoxNjk4MzE5MzY3LCJpYXQiOjE2OTgzMTc1NjcsInVzZXJuYW1lIjoic2F5YXRpMTIiLCJTZXJ2aWNlcyI6bnVsbH0.p1m4HW-EB4Hyxc34z6q1vwIUR59-0VhJ0q97e5sQU10"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8089/api/v1/customer"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Create New Transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJQYXltZW50QXBpIiwiZXhwIjoxNjk4MzE5MzY3LCJpYXQiOjE2OTgzMTc1NjcsInVzZXJuYW1lIjoic2F5YXRpMTIiLCJTZXJ2aWNlcyI6bnVsbH0.p1m4HW-EB4Hyxc34z6q1vwIUR59-0VhJ0q97e5sQU10"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"SenderId\": \"dc39309a-37f8-43e1-bf3b-8fb930b2182d\",\r\n  \"RecieverId\": \"030abba5-94dc-4232-ac78-bb9bc13cb27b\",\r\n  \"Amount\": 200000\r\n}"
+						},
+						"url": "http://localhost:8089/api/v1/transaction"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
